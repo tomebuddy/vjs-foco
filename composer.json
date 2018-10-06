@@ -1,0 +1,14 @@
+{
+    "name": "tomebuddy/test-vue-form-components",
+    "description": "A side project for automating forms using Vue components\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tomebuddy",
+            "email": "tomebuddy@protonmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

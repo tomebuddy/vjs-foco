@@ -1,0 +1,6 @@
+
+# TODO FILE FOR VueJS Form Components PROJECT
+
+* Make a pure HTML mockup for form inputs
+* Use SASS
+* Manage JS/CSS dependencies (Bootstrap, VueJS, SASS, etc) via NPM / Laravel Mix
