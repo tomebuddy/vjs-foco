@@ -5,26 +5,58 @@
         <title>vjs-foco / mockups / inputText</title>
         <script src="../js/vue.min.js" charset="utf-8"></script>
         <script src="../js/main.js" charset="utf-8"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" charset="utf-8"></script>
         <link rel="stylesheet" href="../css/mockups.css">
     </head>
     <body>
         <div class="container">
-            <img src="../img/mockup_input_password.png" alt="Mockup for password input">
+            <!-- <img src="../img/mockup_input_password.png" alt="Mockup for password input"> -->
+            <h1>Input Text Mockup</h1>
             <form action="#" method="POST" id="test">
+                <!-- An email input -->
                 <div class="form-group">
                     <label for="email" class="form-label-block">Email</label>
                     <input type="text" id="email" name="email" placeholder="A text..." value="tomebuddy@protonmail.com"/>
-                    <div class="form-group-notifs">
-
-                    </div>
                 </div>
 
+                <!-- A password input -->
                 <div class="form-group">
                     <label for="password" class="form-label-block">Password</label>
                     <input type="password" id="password" name="password" placeholder="a password..." value="thisisnopassword"/>
-                    <div class="form-group-notifs">
+                </div>
 
+
+                <!-- A password input with notifications -->
+                <!-- Notification status is an icon stating the status of the validation pro -->
+                <!-- e.g. : invalid, pending validation, valid, infos -->
+                <!-- Notification content list notifications and/or display infos -->
+                <div class="form-group">
+                    <label for="password2" class="form-label-block">Password with notifications</label>
+                    <input type="password" id="password2" name="password" placeholder="a password..." value="thisisnopassword"/>
+                    <div class="fg-notif">
+                        <div class="fg-notif-status"></div>
+                        <div class="fg-notif-content">
+                            <ul class="fg-notif-items">
+                                <li class="fg-notif-item fg-invalid">Alphanumeric</li>
+                                <li class="fg-notif-item fg-valid">Minimum length : 5</li>
+                            </ul>
+                        </div>
                     </div>
+                    <script type="text/javascript">
+                        $('#password2')
+                            .on('focus', function () {
+                                $('div.fg-notif-content').toggle(true);
+                            }).on('blur', function () {
+                                $('div.fg-notif-content').toggle(false);
+                            });
+
+                        $('div.fg-notif-status')
+                            .on('mouseenter', function () {
+                                $('div.fg-notif-content').toggle(true);
+                            }).on('mouseleave', function () {
+                                $('div.fg-notif-content').toggle(false);
+                            });
+                    </script>
                 </div>
             </form>
         </div>
