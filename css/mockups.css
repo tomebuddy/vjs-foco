@@ -14,7 +14,12 @@ div.container {
     margin: auto;
 }
 
+/* -------------------------------------------------------------------- */
+/* ---  Forms, From Groups  ------------------------------------------- */
+/* -------------------------------------------------------------------- */
+
 div.form-group {
+    position: relative;
     margin-top: 20px;
 }
 
@@ -22,12 +27,16 @@ div.form-group:nth-child(1) {
     margin-top: 0px;
 }
 
+/* -------------------------------------------------------------------- */
+/* ---  Inputs, Labels  ----------------------------------------------- */
+/* -------------------------------------------------------------------- */
+
 input, label {
     color: #475c6e;
     font-size: 14px;
 }
 
-input::placeholder, label::placeholder {
+input::placeholder {
     color: #7a97b0;
     font-weight: normal;
     letter-spacing: normal;
@@ -37,24 +46,101 @@ input {
     font-weight: bold;
 }
 
-input[type=text], input[type=password] {
+label.form-label-block {
+    display: block;
+    height: 1.55em;
+    padding-left: 3px;
+}
+
+/* -------------------------------------------------------------------- */
+/* ---  Inputs : Texts  ----------------------------------------------- */
+/* -------------------------------------------------------------------- */
+
+input[type=text], input[type=password], input[type=email]  {
+    height: 1.15em;
     width: 250px;
     border-radius: 2px;
     border:solid 1px #ccc;
     padding: 7px 10px;
 }
 
-input[type=password] {
-    letter-spacing: 0.2em;
-}
-
-input[type=text]:focus, input[type=password]:focus {
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
     /* border-color: #437fb1; */
     box-shadow: 0px 0px 5px #437fb1;
 }
 
-label.form-label-block {
-    display: block;
-    margin-bottom: 6px;
-    padding-left: 3px;
+/* -------------------------------------------------------------------- */
+/* ---  Inputs : Texts  ----------------------------------------------- */
+/* -------------------------------------------------------------------- */
+
+input[type=password] {
+    letter-spacing: 0.2em;
+}
+
+/* -------------------------------------------------------------------- */
+/* ---  Notifications  ------------------------------------------------ */
+/* -------------------------------------------------------------------- */
+
+div.fg-notif {
+    height: 2.18em;
+    overflow: visible;
+    position: absolute;
+        top: 1.55em;
+        left: 264px;
+    display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+    /* border: dashed 1px red; */
+}
+
+div.fg-notif-status {
+    cursor: help;
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border-radius: 7.5px;
+    background: #308430;
+}
+
+div.fg-notif-content {
+    /* display: none; */
+    margin-left: 8px;
+    padding: 10px;
+    /* background: #f7f7f7; */
+    border: solid 1px #ccc;
+    border-radius: 2px;
+    color: #666;
+}
+
+ul.fg-notif-items {
+    list-style-type: none;
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+}
+
+li.fg-notif-item {
+    font-weight: bold;
+}
+
+li.fg-notif-item.fg-valid::before, li.fg-notif-item.fg-invalid::before {
+    display: inline-block;
+    min-width: 20px;
+}
+
+li.fg-notif-item.fg-valid {
+    color: #308430;
+}
+
+li.fg-notif-item.fg-valid::before {
+    content: "\2713  ";
+}
+
+li.fg-notif-item.fg-invalid {
+    color: #ca2828;
+}
+
+li.fg-notif-item.fg-invalid::before {
+    content: "\2716  ";
 }
